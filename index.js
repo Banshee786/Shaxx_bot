@@ -14,8 +14,10 @@ client.on('message', msg => {
 
   if (msg.content === `${prefix}ping`) {
     msg.channel.send(`***pong***`);
-  // } else if (msg.content === `${prefix}foo`) {
-  //   msg.channel.send(`bar`);
+  } else if (msg.content === `${prefix}doubles`) {
+     msg.channel.send(`This week's crucible game mode is **doubles**. Grab a partner and prove your strength, guardian!`);
+  } else if (msg.content === `${prefix}factionwar`) {
+     msg.channel.send(`**Faction War is back!** Pledge to your favorite faction and prove your worth to them!`);
   }
 });
 
