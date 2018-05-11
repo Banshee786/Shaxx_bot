@@ -4,4 +4,4 @@ https://discord.js.org/
 
 # Documentation
 
-https://discordjs.guide/#/
+https://discordjs.guide/
