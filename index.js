@@ -17,10 +17,7 @@ client.on('ready', () => {
   client.user.setActivity('Crucible Match #1784', { type: 'WATCHING' });
 });
 
-if (command === `ping`) {
-	msg.channel.send(`Pong`);
-}
-//client.on('message', msg => {
+client.on('message', msg => {
   // debugging
   // console.log(msg.content);
 
@@ -46,7 +43,7 @@ if (command === `ping`) {
   }  */
 	
 	//V2 before command files
-	/* if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+	if (!msg.content.startsWith(prefix) || msg.author.bot) return;
 	
 	const args = msg.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
@@ -54,11 +51,9 @@ if (command === `ping`) {
     if (command === 'ping') {
         msg.channel.send('Pong.');
     }
-    else if (command === 'beep') {
-        msg.channel.send('Boop.');
-    } */
+    
 	
 	
-//});
+});
 
 client.login(token);
