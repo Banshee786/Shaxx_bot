@@ -12,7 +12,8 @@ client.on('message', msg => {
   // debugging
   // console.log(msg.content);
 
-  if (msg.content === `${prefix}ping`) {
+  //V1 Below
+/*   if (msg.content === `${prefix}ping`) {
     msg.channel.send(`***pong***`);
   } else if (msg.content === `${prefix}doubles`) {
      msg.channel.send(`This week's crucible game mode is **doubles**. Grab a partner and prove your strength, guardians!`);
@@ -30,7 +31,18 @@ client.on('message', msg => {
     msg.channel.send(`Lord Saladin is back. **Iron Banner is live!** Gather a fireteam and comepte against another team of six. The game is control. Prove your worth to the Iron Lords and claim victory!`);
   } else if (msg.content === `${prefix}ibsupremacy`) {
     msg.channel.send(`Lord Saladin is back. **Iron Banner is live!** Gather a fireteam and compete against another team of six. The game is supremacy. Prove your worth to the Iron Lords and claim victory!`);
-  } 
+  }  */
+	if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+	
+	const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+
+    if (command === 'ping') {
+        message.channel.send('Pong.');
+    }
+    else if (command === 'beep') {
+        message.channel.send('Boop.');
+    }
 });
 
 client.login(token);
