@@ -17,6 +17,9 @@ client.on('ready', () => {
   client.user.setActivity('Crucible Match #1784', { type: 'WATCHING' });
 });
 
+if (command === `ping`) {
+	msg.channel.send(`Pong`);
+}
 //client.on('message', msg => {
   // debugging
   // console.log(msg.content);
