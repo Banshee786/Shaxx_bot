@@ -17,7 +17,7 @@ client.on('ready', () => {
   client.user.setActivity('Crucible Match #1784', { type: 'WATCHING' });
 });
 
-client.on('message', msg => {
+//client.on('message', msg => {
   // debugging
   // console.log(msg.content);
 
@@ -56,6 +56,6 @@ client.on('message', msg => {
     } */
 	
 	
-});
+//});
 
 client.login(token);
