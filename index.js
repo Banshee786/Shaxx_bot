@@ -62,17 +62,13 @@ client.on('message', msg => {
 		`Was that all of them? THAT WAS ALL OF THEM?`,
 	];
   var rand = Math.floor(Math.random() * quotes.length);
-  console.log('random quote (' + rand + '): ' + quotes[rand]);
 
-  console.log('mentions has an array of users? ' + Array.isArray(msg.mentions.members));
-  console.log('mentions has an array of users? ' + Array.isArray(msg.mentions));
-  console.log('bot user: ' + client.user);
-
-	// if (msg.mentions.members.includes(client.user)) {
-	// 	msg.channel.send(quotes[rand]);
-	// }
-
-
+  if (msg.isMentioned(client.user)) {
+    msg.channel.send(quotes[rand]);
+  }
+  
+  
+  
 });
 
 client.login(token);
