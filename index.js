@@ -54,7 +54,7 @@ client.on('message', msg => {
  } else if (msg.content === `${prefix}ibsupremacy`) {
     msg.channel.send(`Lord Saladin is back. **Iron Banner is live!** Gather a fireteam and compete against another team of six. The game is supremacy. Prove your worth to the Iron Lords and claim victory!`);
 
- } else if (msg.content === `${prefix}help`) {
+ } else if (msg.content === `${prefix}shaxxHelp`) {
  	msg.channel.send(`!ping \n !doubles \n !factionwar \n !rumble \n !mayhem \n !sword \n !ibclash \n !ibcontrol \n !ibsupremacy`);
  }
 
