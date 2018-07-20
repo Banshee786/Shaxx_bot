@@ -9,16 +9,36 @@ client.on('ready', () => {
   client.user.setActivity('Crucible Match #1784', { type: 'WATCHING' });
 });
 
+//error handling-not functional?
+//client.on('error', (e) => console.error(e));
+
 client.on('message', msg => {
   // debugging
   // console.log(msg.content);
 
   // ignore other bots
   if (msg.author.bot) {
-    console.log('Ignoring msg from other bot: ' + msg.author.id);
+    console.log('Ignoring msg from other bot: ' + msg.author.username + '#' + msg.author.discriminator);
     return;
   }
-
+  
+  //ingores messages not in guilds(servers)
+    if (!msg.guild) return;
+    
+    //MUSIC
+    
+    if (msg.content === `${prefix}join`) {
+        
+        if (msg.member.voiceChannel) {
+            msg.member.voiceChannel.join()
+            .then(connection => {
+                msg.reply('Are you ready, Oryx slayer?');
+            })
+            .catch(console.log);
+        } else {
+            msg.reply('No holding back! Your enemies won't!');
+        }
+    }
   // ignore messages that don't start with our Prefix
   // ***
   // not working when mentioned
@@ -45,7 +65,7 @@ client.on('message', msg => {
  } else if (msg.content === `${prefix}sword`) {
     msg.channel.send(`https://www.youtube.com/watch?v=RI5KQ_yQLoU`);
 
- } else if (msg.content === `${prefix}ibclash`) {
+} else if (msg.content === `${prefix}ibclash`) {
     msg.channel.send(`Lord Saladin is back. **Iron Banner is live!** Gather a fireteam and compete against another team of six. The game is clash. Prove your worth to the Iron Lords and claim victory!`);
 
  } else if (msg.content === `${prefix}ibcontrol`) {
@@ -90,14 +110,14 @@ client.on('message', msg => {
 		`Let them burn in your light.`,
 		`My... this is... this is beautiful... You continue to be my greatest success, Guardian.`,
 		`Always good to see another hero of the Tower.`,
-		`What do you mean you can't concentrate when I'm shouting, get back out there.`,
+		`WHAT DO YOU MEAN YOU CANT CONCENTRATE WHEN I'M SHOUTUNG, GET BACK OUT THERE!`,
 		`They can't win if they're dead! Haha!`,
 		`Your enemy understands the art of demolition. You'll get there.`,
 		`Fought like a Titan of the First Pillar!`,
 		`Ikora would be proud of you, Warlock!`,
 		`Hunters like you blaze a path for the rest of us!`,
 		`Who says Warlocks are better with books than with guns? OK... it was me. But I was lying. Rage is an excellent motivator.`,
-		`I don't even know who to be angry at!`,
+		`I DON'T EVEN KNOW WHO TO BE ANGRY AT!`,
 		`You're crushing them. Send them home crying.`,
 	];
   var rand = Math.floor(Math.random() * quotes.length);
