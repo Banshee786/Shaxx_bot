@@ -23,22 +23,22 @@ client.on('message', msg => {
   }
   
   //ingores messages not in guilds(servers)
-    if (!msg.guild) return;
+    // if (!msg.guild) return;
     
-    //MUSIC
+    // //MUSIC
     
-    if (msg.content === `${prefix}join`) {
+    // if (msg.content === `${prefix}join`) {
         
-        if (msg.member.voiceChannel) {
-            msg.member.voiceChannel.join()
-            .then(connection => {
-                msg.reply('Are you ready, Oryx slayer?');
-            })
-            .catch(console.log);
-        } else {
-            msg.reply('No holding back! Your enemies won't!');
-        }
-    }
+    //     if (msg.member.voiceChannel) {
+    //         msg.member.voiceChannel.join()
+    //         .then(connection => {
+    //             msg.reply('Are you ready, Oryx slayer?');
+    //         })
+    //         .catch(console.log);
+    //     } else {
+    //         msg.reply("No holding back! Your enemies won't!");
+    //     }
+    // }
   // ignore messages that don't start with our Prefix
   // ***
   // not working when mentioned
