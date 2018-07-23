@@ -86,8 +86,8 @@ client.on('message', msg => {
  } else if (command === 'factionwar') {
      msg.channel.send(`**Faction War is back!** Pledge to your favorite faction and prove your worth to them!`);
 
- } else if (command === 'rumble') {
-    msg.channel.send(`This week's crucible game mode is **rumble**. Compete against five other guaridans and claim victory!`);
+ } else if (command === 'supremacy') {
+    msg.channel.send(`This week's crucible game mode is **supremacy**. Claim crests, achieve victory!`);
 
  } else if (command === 'mayhem') {
     msg.channel.send(`This week's crucible game mode is **mayhem**! Let the chaos escalate. Rise out of the ashes and claim victory, guadians!`);
