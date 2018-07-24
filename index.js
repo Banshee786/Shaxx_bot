@@ -73,6 +73,18 @@ client.on('message', msg => {
           msg.member.voiceChannel.connection.dispatcher.end();
       }
     }
+    if (command === 'pause') {
+      if (msg.member.voiceChannel) {
+        console.log('Pausing Music...');
+        msg.member.voiceChannel.connection.dispatcher.pause();
+      }
+    }
+    if (command === 'resume') {
+      if (msg.member.voiceChannel) {
+        console.log('Resuming Playback...');
+        msg.member.voiceChannel.connection.dispatcher.resume();
+      }
+    }
   // ignore messages that don't start with our Prefix
   // ***
   // not working when mentioned
