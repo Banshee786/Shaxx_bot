@@ -56,6 +56,10 @@ client.on('message', msg => {
         return;
       }
       if (msg.member.voiceChannel) {
+        msg.member.voiceChannel.join()
+            .then(connection => {
+                msg.reply('Are you ready, Oryx slayer?');
+        })
         console.log('getting url for audio stream...');
         // args[0] is youtube url to play
         const streamOptions = { seek: 0, volume: 0.5 };
