@@ -8,7 +8,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   console.log(`Prefix is ${prefix}.`);
-  client.user.setActivity('Crucible Match #1784', { type: 'WATCHING' });
+  client.user.setActivity('Another solo nova bomb', { type: 'WATCHING' });
 });
 
 //error handling-not functional?
