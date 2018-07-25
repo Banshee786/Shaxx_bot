@@ -1,5 +1,6 @@
 
-const { prefix, token } = require('./config.json');
+const { prefix } = require('./config.json');
+const { token } = require('./secrets.json');
 // const { exec } = require('child_process');
 const ytdl = require('ytdl-core');
 const Discord = require('discord.js');
