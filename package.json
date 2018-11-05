@@ -5,9 +5,7 @@
   "repository": "https://github.com/Banshee786/Shaxx_bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "disabled_dependency": "ytdl-core-^0.21.1",
-    "disabled2": "node-opus-^0.2.9"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "banshee786",
   "license": "ISC",
@@ -17,9 +15,11 @@
     "erlpack": "github:discordapp/erlpack",
     "ffmpeg-binaries": "^4.0.0",
     "libsodium-wrappers": "^0.7.3",
-    "discord.js-musicbot-addon": "^12.0.6",
+    "discord.js-musicbot-addon": "^13.0.1",
     "opusscript": "0.0.6",
     "sodium": "^2.0.3",
-    "uws": "^9.148.0"
+    "uws": "^9.148.0",
+    "node-opus": "^0.2.9",
+    "ytdl-core":"^0.21.1"
   }
 }

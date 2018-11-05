@@ -9,7 +9,20 @@ client.commands = new Discord.Collection();
 const Music = require('discord.js-musicbot-addon');
 
 Music.start(client, {
-  youtubeKey: youtubeAPI
+  youtubeKey: youtubeAPI,
+  anyoneCanSkip: true,
+  anyoneCanPause: true,
+  anyoneCanJoin: true,
+  anyoneCanLeave: true,
+  enableQueueStat: true,
+  clearOnLeave: true,
+  cooldown: {
+    disabled: true,
+    timer: 0
+  },
+  leave: {
+    disabled: false,
+  },
 });
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -30,7 +43,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   // debugging
-  // console.log(msg.content);
+  console.log(msg.content);
 
   //Ignores users not in server
   if (!msg.guild) return;
@@ -54,11 +67,11 @@ client.on('message', msg => {
   //     msg.reply("No holding back! Your enemies won't!");
   //   }
   // }
-  // if (command === 'leave') {
-  //   if (msg.member.voiceChannel) {
-  //     msg.member.voiceChannel.leave();
-  //   }
-  // }
+  if (command === 'leave') {
+    if (msg.member.voiceChannel) {
+      msg.member.voiceChannel.leave();
+    }
+  }
   // if (command === 'play') {
   //   if (args.length < 1) {
   //     msg.reply(`syntax is important, guardian: ${prefix}play [url]`);
