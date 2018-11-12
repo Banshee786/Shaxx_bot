@@ -11,15 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "bufferutil": "^3.0.5",
-    "discord.js": "^11.3.2",
+    "discord.js": "^11.4.2",
+    "discord.js-musicbot-addon": "^13.0.3",
     "erlpack": "github:discordapp/erlpack",
     "ffmpeg-binaries": "^4.0.0",
     "libsodium-wrappers": "^0.7.3",
-    "discord.js-musicbot-addon": "^13.0.1",
+    "node-opus": "^0.2.9",
     "opusscript": "0.0.6",
     "sodium": "^2.0.3",
     "uws": "^9.148.0",
-    "node-opus": "^0.2.9",
-    "ytdl-core":"^0.21.1"
+    "ytdl-core": "^0.28.0"
   }
 }
