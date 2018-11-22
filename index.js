@@ -16,6 +16,7 @@ Music.start(client, {
   anyoneCanLeave: true,
   enableQueueStat: true,
   clearOnLeave: true,
+  defVolume: 20,
   cooldown: {
     disabled: true,
     timer: 0
