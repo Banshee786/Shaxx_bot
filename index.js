@@ -40,11 +40,11 @@ client.on('ready', () => {
 });
 
 //error handling-not functional?
-//client.on('error', (e) => console.error(e));
+// client.on('error', (e) => console.error(e));
 
 client.on('message', msg => {
   // debugging
-  console.log(msg.content);
+  // console.log(msg.content);
 
   //Ignores users not in server
   if (!msg.guild) return;
