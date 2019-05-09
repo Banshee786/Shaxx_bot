@@ -55,6 +55,8 @@ client.on('message', msg => {
     return;
   }
 
+  // if (!msg.content.startsWith(prefix)) return;
+
   const args = msg.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
@@ -157,6 +159,9 @@ client.on('message', msg => {
   // dynamic command parsing
   // if (!client.commands.has(command)) return;
   if (client.commands.has(command)) {
+    // commands must start with the prefix,
+    // but do it here so that tags still work.
+    if (!msg.content.startsWith(prefix)) return;
     try {
       client.commands.get(command).execute(msg, args);
     } catch (error) {
